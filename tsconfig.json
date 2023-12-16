@@ -24,7 +24,10 @@
 
       //Позволяет использовать обычные Import без * as  для
       // пакетов не поддерживающих стандарный импорт
-      "allowSyntheticDefaultImports": true
+      "allowSyntheticDefaultImports": true,
+
+    //ДЛя абсолютного импорта
+      "baseUrl": ".",
   },
   //Если используем webpack или другой инструмент сборки,
   //установите переопределение для ts-node. конфигурация ts-node
