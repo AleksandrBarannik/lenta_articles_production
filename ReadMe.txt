@@ -17,3 +17,14 @@ npm  i -D typescript@4.5.5 ts-loader@9.2.6
 npm  i -D  ts-node@10.5.0 webpack-dev-server@4.7.4  @types/node@17.0.21
 // После найстройки конфигурации TypeScript
 npm  i -D  webpack-dev-server@4.7.4 @types/webpack-dev-server@4.7.2
+
+npm i react@17.0.2 react-dom@17.0.2
+npm i react-router-dom@6.2.1
+npm i -D @types/react@17.0.39  @types/react-dom@17.0.11
+npm i -D @types/react-router-dom@5.3.3
+
+npm install  sass-loader@12.6.0 sass@1.49.9  style-loader@3.3.1  css-loader@6.6.0  --save-dev
+
+
+
+
