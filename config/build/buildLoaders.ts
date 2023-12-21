@@ -5,6 +5,7 @@ import {BuildOptions} from "./types/config";
 // return all loaders (write all loaders)
 export function buildLoaders({isDev}:BuildOptions):webpack.RuleSetRule[]
 {
+
     const cssLoader = {
         test: /\.s[ac]ss$/i,
         use: [
