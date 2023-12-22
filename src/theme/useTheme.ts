@@ -1,6 +1,7 @@
 import {LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext} from "./ThemeContext";
 import {useContext} from "react";
 
+//Hook for change Theme
 interface useThemeResult{
     toggleTheme: ()=> void;
     theme: Theme;

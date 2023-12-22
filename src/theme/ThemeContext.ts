@@ -1,6 +1,6 @@
 import {createContext} from "react";
 
-
+//Global Context and key for LocalStorage
 export enum Theme {
     LIGHT = 'light',
     DARK = 'dark',
