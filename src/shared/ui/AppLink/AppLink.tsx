@@ -3,10 +3,11 @@ import {classNames} from "shared/lib/classNames/classNames";
 import cls from './AppLink.module.scss'
 import {Link, LinkProps} from "react-router-dom";
 
+//new Theme in component AppLinks
 export enum AppLinkTheme
 {
     PRIMARY = 'primary',
-    SECONDARY = 'secondary'
+    SECONDARY = 'secondary'// все что в кавычках Из .scss берется
 }
 
 
@@ -17,7 +18,7 @@ interface AppLinkProps extends LinkProps{
 
 export const AppLink : FC <AppLinkProps> = (props) => {
 
-    //Деструкторизация пропсов
+    //destructorize props
     const  {
         to,
         className,

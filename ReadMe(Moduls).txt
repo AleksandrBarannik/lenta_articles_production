@@ -30,6 +30,12 @@ npm install  sass-loader@12.6.0 sass@1.49.9  style-loader@3.3.1  css-loader@6.6.
 //Для разделения стилей в отдельныый файл(при сборке)
 npm install --save-dev mini-css-extract-plugin@2.5.3
 
+//Для работы с svg файлами
+npm install  @svgr/webpack@6.2.1 --save-dev
+//Работа с файлами jpeg;png;ets
+npm install file-loader@6.2.0  --save-dev
+
+
 
 
 
