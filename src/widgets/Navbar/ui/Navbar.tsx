@@ -8,13 +8,12 @@ interface NavbarProps {
     className?: string;
 
 }
-
+//Навигационная панель вверху с сылками
 export function Navbar({className} : NavbarProps) {
 
     return (
         <div className={classNames(cls.navbar,{},[className])}>
 
-            <ThemeSwitcher/>
 
             <div className={cls.links}>
                 <AppLink
