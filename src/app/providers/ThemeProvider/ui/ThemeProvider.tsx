@@ -3,6 +3,12 @@ import {LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext} from '../lib/ThemeContext'
 
 const defaultTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme || Theme.LIGHT;
 
+//ThemeProvider берет контекст и передает его
+//любому компоненту приложения
+//путем оборота  приложения App  в Этот ThemeProvider в index.html
+//<ThemeProvider>
+//     <App/>
+//</ThemeProvider>
 
 const ThemeProvider: FC = ({children}) => {
     const [theme,setTheme] = useState<Theme>(defaultTheme);

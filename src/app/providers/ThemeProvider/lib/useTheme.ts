@@ -1,12 +1,13 @@
 import {LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext} from "./ThemeContext";
 import {useContext} from "react";
 
-//Hook for change Theme
+//Для типизации
 interface useThemeResult{
     toggleTheme: ()=> void;
     theme: Theme;
 }
 
+//Для установки темы
 export  function useTheme():useThemeResult {
 
     const {theme,setTheme} = useContext(ThemeContext);
