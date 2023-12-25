@@ -8,13 +8,15 @@ interface SidebarProps {
     className?: string;
 
 }
-//Боковая панель которую можно свернуть/Развернуть как на ютубе
+//Боковая панель которую можно свернуть
+// Развернуть как на ютубе
+//Содержит  компоненты переключатель тем и языков
 export const Sidebar = ({className} : SidebarProps) => {
 
     const [collapsed,setCollapsed] = useState(false);
 
     const onToggle = (()=>{
-        setCollapsed(prev=> !prev);
+        setCollapsed(prev => !prev);
 
     });
 

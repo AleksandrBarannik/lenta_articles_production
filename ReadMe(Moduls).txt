@@ -1,16 +1,13 @@
-1) Setup webpuck:
-                   npm i -D webpack@5.69.1  @types/webpack@5.28.0
-                   npm i -D webpack-cli@4.10.0
-2) ЗАпустить PowerShell от имени администратора
-3) ввести
-                    Set-ExecutionPolicy RemoteSigned
-4) Введите Y для подтверждения
+                Для использование webpack Надо:
 
-Все что нужно установить:
-npm i -D webpack@5.69.1 webpack-cli@4.9.2
+1) Запустить PowerShell от имени администратора
+2) Ввести:  Set-ExecutionPolicy RemoteSigned
+3) Ввести Y для подтверждения
 
+                 Все что нужно установить:
+
+npm i -D webpack@5.69.1 webpack-cli@4.10.0 @types/webpack@5.28.0
 npm i -D html-webpack-plugin@5.5.0
-
 npm  i -D typescript@4.5.5 ts-loader@9.2.6
 
 //Для возможности создания webpack.config.ts
@@ -41,6 +38,13 @@ npm install react-i18next@11.15.5  i18next@21.6.11  --save
 npm install i18next-browser-languagedetector@6.1.3 --save
 //Для асинхронной подгрузки нужного языка
 npm install i18next-http-backend@1.3.2 --save
+
+//Для автоматического обновления
+//в браузере после изменения в коде омпонента
+npm i -D react-refresh@0.12.0
+npm i -D @pmmmwh/react-refresh-webpack-plugin@0.5.5
+
+
 
 
 
