@@ -6,14 +6,14 @@ import LightIcon from 'shared/assets/icons/theme-light.svg'
 import DarkIcon from 'shared/assets/icons/theme-dark.svg'
 import {Button, ThemeButton} from "shared/ui/Button/Button";
 
-//Отвечает за переключение темы  ,
-//Берет темы из app/styles
+
 interface ThemeSwitcherProps {
     className?: string;
 
 }
 
-
+//Отвечает за переключение темы  ,
+//Берет темы из app/styles
 export const ThemeSwitcher = ({className} : ThemeSwitcherProps) => {
 
     const {theme,toggleTheme} = useTheme();

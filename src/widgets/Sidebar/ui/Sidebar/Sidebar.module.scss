@@ -4,7 +4,7 @@
   background: var(--inverted-bg-color);
 
   position: relative;
-  transition: width 0.3s;
+  transition: width 0.3s;//Для плавного сокрытия и открытия
 }
 
 .collapsed{
@@ -20,4 +20,8 @@
   justify-content: center;
   width: 100%;
 
+}
+
+.lang{
+  margin-left: 20px;
 }

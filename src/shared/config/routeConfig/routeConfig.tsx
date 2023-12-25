@@ -1,6 +1,7 @@
 import { RouteProps } from "react-router-dom"
 import {MainPage} from "pages/MainPage";
 import {AboutPage} from "pages/AboutPage";
+//Config for routing
 
             //Names Pages
 export enum AppRoutes{

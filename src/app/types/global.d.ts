@@ -1,5 +1,5 @@
 //Для решения проблеммы с TypeScrypt
-// для разных типов (SCSS;SVG;PNG;JPEG;)
+// для разных типов (SCSS;SVG;PNG;JPEG;)Global variables;
 declare module '*.scss' {
     interface IClassNames {
         [className: string]: string
@@ -16,3 +16,5 @@ declare module "*.svg" {
     const SVG: React.VFC<React.SVGProps<SVGSVGElement>>;
     export default SVG;
 }
+
+declare const  __IS_DEV__ : boolean;

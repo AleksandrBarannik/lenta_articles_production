@@ -32,8 +32,17 @@ npm install --save-dev mini-css-extract-plugin@2.5.3
 
 //Для работы с svg файлами
 npm install  @svgr/webpack@6.2.1 --save-dev
+
 //Работа с файлами jpeg;png;ets
 npm install file-loader@6.2.0  --save-dev
+
+//Для работы с переключением языков
+npm install react-i18next@11.15.5  i18next@21.6.11  --save
+npm install i18next-browser-languagedetector@6.1.3 --save
+//Для асинхронной подгрузки нужного языка
+npm install i18next-http-backend@1.3.2 --save
+
+
 
 
 
