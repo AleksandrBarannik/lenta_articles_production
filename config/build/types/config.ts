@@ -1,5 +1,5 @@
-//description Types for builds
-export type BuildMode =  'production' | 'development';
+// description Types for builds
+export type BuildMode = 'production' | 'development';
 
 export interface BuildPath {
     entry: string;

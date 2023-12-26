@@ -49,6 +49,24 @@ npm i -D babel-loader@8.2.3 @babel/core@7.17.5
 npm i -D  babel-plugin-i18next-extract@0.8.3
 npm i -D @babel/preset-env@7.16.11
 
+      //Для настройки стилистики кода и тд
+npm i -D  eslint@8.10.0
+npm i -D  eslint-plugin-react@7.29.2
+npm i -D  eslint-plugin-react-hooks@4.3.0
+npm i -D  eslint-plugin-jsx-a11y@6.5.1
+npm i -D  eslint-plugin-import@2.25.4
+npm i -D eslint-plugin-i18next@5.1.2
+npm i -D  eslint-config-airbnb@19.0.4
+
+    //Инициализация eslint
+//npm init @eslint/config  Лучше скопировать файл настроек .eslintrc.js
+
+    //Для исправления всех проблем в коде
+//eslint "**/*.{ts,tsx}" --fix
+
+
+
+
 
 
 
