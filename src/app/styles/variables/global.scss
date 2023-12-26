@@ -1,21 +1,17 @@
 :root {
-  --font-family-main: Consolas, "Times New Roman", serif; //Тип шрифта
+    --font-family-main: consolas, "Times New Roman", serif; // Тип шрифта
+    --font-size-m: 16px; // переменная со стандартным шрифтом
+    --font-line-m: 24px; // Высота линии шрифта
+    // Обьедененная переменная  для стандартного шрифта
+    --font-m: var(--font-size-m) / var(--font-line-m) / var(--font-family-main);
+    --font-size-l: 24px; // Для заголовков
+    --font-line-l: 32px;
+    --font-l: var(--font-size-l) / var(--font-line-l) / var(--font-family-main);
 
-  --font-size-m: 16px; // переменная со стандартным шрифтом
-  --font-line-m: 24px; //Высота линии шрифта
-  //Обьедененная переменная  для стандартного шрифта
-  --font-m: var (--font-size-m) / var (--font-line-m) / var (--font-family-main);
+    // Размеры
+    --navbar-height: 50px;
 
-  --font-size-l: 24px; // Для заголовков
-  --font-line-l: 32px;
-  --font-l: var (--font-size-l) / var (--font-line-l) / var (--font-family-main);
-
-  //Размеры
-  --navbar-height: 50px;
-
-  //развернутое и свернутое состояние сайдбара
-  --sidebar-width: 300px;
-  --sidebar-width-collapsed: 60px;
-
-
+    // развернутое и свернутое состояние сайдбара
+    --sidebar-width: 300px;
+    --sidebar-width-collapsed: 60px;
 }
