@@ -8,9 +8,9 @@ interface NavbarProps {
     className?: string;
 
 }
-// Навигационная панель вверху с сылками
+// Navigation panel with links to page
 export function Navbar({ className } : NavbarProps) {
-    const [t, i18n] = useTranslation();
+    const { t } = useTranslation();
     return (
         <div className={classNames(cls.navbar, {}, [className])}>
 
