@@ -8,12 +8,12 @@ interface LangSwitcherProps {
 
 }
 
-// Отвечает за смену языка .
-// Исползуем const  {t, i18n} = useTranslation();
-//  Ключ передаем в нужном нам компоненте таким образом:
+// switch Language .
+// use const  {t, i18n} = useTranslation();
+//  key transfer on template:
 //  {t('ТЕстовый пример')}
-// Сам перевод описываем в виде  "Ключ" : "значение"
-// в  public/locales/ru; public/locales/en;
+// Translate describe in view:  "key" : "value"
+// in  public/locales/ru; public/locales/en;
 export const LangSwitcher = ({ className } : LangSwitcherProps) => {
     const { t, i18n } = useTranslation();
 

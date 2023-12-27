@@ -10,13 +10,13 @@ interface ThemeSwitcherProps {
 
 }
 
-// Отвечает за переключение темы  ,
-// Берет темы из app/styles
+// switch theme  ,
+// take theme in app/styles
 export const ThemeSwitcher = ({ className } : ThemeSwitcherProps) => {
     const { theme, toggleTheme } = useTheme();
 
     return (
-        // Button - наш созданный и настроенный компонент
+        // Button - our created component
         <Button
             theme={ThemeButton.CLEAR}
             className={classNames('', {}, [className])}

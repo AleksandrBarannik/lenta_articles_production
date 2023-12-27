@@ -41,7 +41,7 @@ module.exports = {
         'import/extensions': 'off', // отключение ошибки что нет  расширений(.ts) в импортах
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
-        'i18next/no-literal-string': ['error', { markupOnly: true }],
+        'i18next/no-literal-string': ['error', { markupOnly: true }], // Выдавал ошибку если текст не переведен
     },
     globals: {
         __IS_DEV__: true,

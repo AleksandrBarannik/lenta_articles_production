@@ -39,7 +39,7 @@ export function buildLoaders({ isDev }:BuildOptions):webpack.RuleSetRule[] {
             {
                 loader: 'css-loader',
                 options: {
-                    // Для изоляции стилей (генерации уникальных Id при сборке)
+                    // for style isolation (Generate unique ID)
                     modules: {
 
                         auto: (resPath: string) => Boolean(resPath.includes('.module.')),

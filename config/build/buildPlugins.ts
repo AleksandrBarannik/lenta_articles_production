@@ -18,8 +18,7 @@ export function buildPlugins({ paths, isDev }: BuildOptions):webpack.WebpackPlug
             chunkFilename: 'css/[name].[contenthash:8].css', // for async
         }),
 
-        new webpack.DefinePlugin({
-            // for передачи global variables in app
+        new webpack.DefinePlugin({ // for transfer global variables in app
             // For TS __IS_DEV__ create in app/types/global.ts
             __IS_DEV__: JSON.stringify(isDev),
         }),

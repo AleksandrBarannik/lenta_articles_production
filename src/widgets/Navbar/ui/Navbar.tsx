@@ -1,6 +1,7 @@
 import React from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
+import { useTranslation } from 'react-i18next';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -9,6 +10,7 @@ interface NavbarProps {
 }
 // Навигационная панель вверху с сылками
 export function Navbar({ className } : NavbarProps) {
+    const [t, i18n] = useTranslation();
     return (
         <div className={classNames(cls.navbar, {}, [className])}>
 
@@ -18,11 +20,12 @@ export function Navbar({ className } : NavbarProps) {
                     to="/"
                     className={cls.mainLink}
                 >
-                    Главная страница
+                    {t('Главная страница')}
                 </AppLink>
 
+                {/* eslint-disable-next-line i18next/no-literal-string */}
                 <AppLink theme={AppLinkTheme.SECONDARY} to="/about">
-                    О нас
+                    {t('О сайте')}
                 </AppLink>
             </div>
 
