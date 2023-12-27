@@ -21,6 +21,11 @@ npm i react-router-dom@6.2.1
 npm i -D @types/react@17.0.39  @types/react-dom@17.0.11
 npm i -D @types/react-router-dom@5.3.3
 
+     // Для автоматического обновления
+    // в браузере после изменения в коде омпонента
+npm i -D react-refresh@0.12.0
+npm i -D @pmmmwh/react-refresh-webpack-plugin@0.5.5
+
     // CSS
 npm install  sass-loader@12.6.0 sass@1.49.9  style-loader@3.3.1  css-loader@6.6.0  --save-dev
 
@@ -39,12 +44,7 @@ npm install i18next-browser-languagedetector@6.1.3 --save
     // Для асинхронной подгрузки нужного языка
 npm install i18next-http-backend@1.3.2 --save
 
-    // Для автоматического обновления
-    // в браузере после изменения в коде омпонента
-npm i -D react-refresh@0.12.0
-npm i -D @pmmmwh/react-refresh-webpack-plugin@0.5.5
 
-    //Преобразует код из одних стандартов в другие
 npm i -D babel-loader@8.2.3 @babel/core@7.17.5
 npm i -D  babel-plugin-i18next-extract@0.8.3
 npm i -D @babel/preset-env@7.16.11
@@ -55,8 +55,9 @@ npm i -D  eslint-plugin-react@7.29.2
 npm i -D  eslint-plugin-react-hooks@4.3.0
 npm i -D  eslint-plugin-jsx-a11y@6.5.1
 npm i -D  eslint-plugin-import@2.25.4
-npm i -D eslint-plugin-i18next@5.1.2
+npm i -D  eslint-plugin-i18next@5.1.2
 npm i -D  eslint-config-airbnb@19.0.4
+
     // Инициализация eslint
     // Лучше скопировать файл настроек .eslintrc.js
 
@@ -66,6 +67,11 @@ eslint "**/*.{ts,tsx}" --fix
 
     // codeStyle для SCSS
 npm i -D stylelint@14.5.3 stylelint-config-standard-scss@3.0.0
+
+    //Jest  Для тестирования JS
+npm i -D jest@27.5.1
+npm i --save-dev @types/jest@27.4.1
+npm i -D @babel/preset-typescript@7.16.7
 
 
 
