@@ -6,9 +6,12 @@ export function buildResolves(options:BuildOptions):ResolveOptions {
     return {
         extensions: ['.tsx', '.ts', '.js'],
 
-        preferAbsolute: true, // Absolute Path prefer(приоритет)
+        // Absolute Path prefer(приоритет)
+        preferAbsolute: true,
         modules: [options.paths.src, 'node_modules'],
-        mainFiles: ['index'], // public MainFiles for each modules
+
+        // public MainFiles for each module
+        mainFiles: ['index'],
         alias: {},
     };
 }

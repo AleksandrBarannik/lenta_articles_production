@@ -6,7 +6,8 @@ export function buildDevServer(options: BuildOptions): DevServerConfiguration {
 
         port: options.port,
         open: true,
-        historyApiFallback: true, // to go to the path: /about ; ets
+        // to go to the path: /about ; ets
+        historyApiFallback: true,
         hot: true,
 
     };

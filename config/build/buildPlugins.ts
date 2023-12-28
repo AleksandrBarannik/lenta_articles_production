@@ -2,23 +2,29 @@ import HTMLWebpackPlugin from 'html-webpack-plugin';
 import webpack from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import { BuildOptions, BuildPath } from './types/config';
 
 // return all Plugins for webpack
 export function buildPlugins({ paths, isDev }: BuildOptions):webpack.WebpackPluginInstance[] {
     return [
+
+        // for automatic add Html in build on our template
         new HTMLWebpackPlugin({
-            // for automatic add Html in build on our template
             template: paths.html,
         }),
-        new webpack.ProgressPlugin(), // for progress build in %
 
+        // for progress build in %
+        new webpack.ProgressPlugin(),
+
+        // for отдельных Css files in build
         new MiniCssExtractPlugin({
             filename: 'css/[name].[contenthash:8].css',
             chunkFilename: 'css/[name].[contenthash:8].css', // for async
         }),
 
-        new webpack.DefinePlugin({ // for transfer global variables in app
+        // for transfer global variables in app
+        new webpack.DefinePlugin({
             // For TS __IS_DEV__ create in app/types/global.ts
             __IS_DEV__: JSON.stringify(isDev),
         }),
@@ -27,5 +33,6 @@ export function buildPlugins({ paths, isDev }: BuildOptions):webpack.WebpackPlug
         new webpack.HotModuleReplacementPlugin(),
         new ReactRefreshPlugin(),
 
+        new BundleAnalyzerPlugin(),
     ];
 }

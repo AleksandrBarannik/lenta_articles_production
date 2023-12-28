@@ -73,6 +73,12 @@ npm i -D jest@27.5.1
 npm i --save-dev @types/jest@27.4.1
 npm i -D @babel/preset-typescript@7.16.7
 
+    // Анализирует размер бандла и все что с ним связано
+npm i -D webpack-bundle-analyzer@4.5.0
+npm i -D @types/webpack-bundle-analyzer@4.4.1
+
+
+
 
 
 
