@@ -23,7 +23,6 @@ export function Navbar({ className } : NavbarProps) {
                     {t('Главная страница')}
                 </AppLink>
 
-                {/* eslint-disable-next-line i18next/no-literal-string */}
                 <AppLink theme={AppLinkTheme.SECONDARY} to="/about">
                     {t('О сайте')}
                 </AppLink>

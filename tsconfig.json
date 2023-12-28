@@ -39,8 +39,10 @@
             "module": "CommonJS"
         }
     },
-    // Чтобы подроужить Jest-dom c  ts
+    // Чтобы подроужить Jest-dom c  ts; и иправить ошибку с путями
     "include": [
-      "./config/jest/jest.config.ts"
+      "./config/jest/jest.config.ts",
+      "./src/**/*.ts",
+      "./src/**/*.tsx"
     ]
 }

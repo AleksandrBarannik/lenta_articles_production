@@ -42,17 +42,17 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
         'i18next/no-literal-string': [
-            'error',
+            'error', // Выдавал ошибку если текст не переведен
             {
                 markupOnly: true,
-                ignoreAttribute: ['data-testid'], // игнорирование data-testid
+                ignoreAttribute: ['data-testid', 'to'], // игнорирование data-testid
             },
-        ], // Выдавал ошибку если текст не переведен
+        ],
     },
     globals: {
         __IS_DEV__: true,
     },
-    overrides: [
+    overrides: [ // Переопределяем правила для тестов перевод не нужен
         {
             files: ['**/src/**/*.test.{ts,tsx}'],
             rules: {
