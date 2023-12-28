@@ -38,5 +38,9 @@
         "compilerOptions": {
             "module": "CommonJS"
         }
-    }
+    },
+    // Чтобы подроужить Jest-dom c  ts
+    "include": [
+      "./config/jest/jest.config.ts"
+    ]
 }

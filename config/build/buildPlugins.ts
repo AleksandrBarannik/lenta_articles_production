@@ -33,6 +33,8 @@ export function buildPlugins({ paths, isDev }: BuildOptions):webpack.WebpackPlug
         new webpack.HotModuleReplacementPlugin(),
         new ReactRefreshPlugin(),
 
-        new BundleAnalyzerPlugin(),
+        new BundleAnalyzerPlugin({
+            openAnalyzer: false,
+        }),
     ];
 }

@@ -1,13 +1,13 @@
 import { useContext } from 'react';
 import { LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext } from './ThemeContext';
 
-// Для типизации
+// for Types theme
 interface useThemeResult{
     toggleTheme: ()=> void;
     theme: Theme;
 }
 
-// Для установки темы
+// for Set Theme
 export function useTheme():useThemeResult {
     const { theme, setTheme } = useContext(ThemeContext);
 

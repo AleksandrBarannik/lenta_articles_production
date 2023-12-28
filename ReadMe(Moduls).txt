@@ -72,10 +72,22 @@ npm i -D stylelint@14.5.3 stylelint-config-standard-scss@3.0.0
 npm i -D jest@27.5.1
 npm i --save-dev @types/jest@27.4.1
 npm i -D @babel/preset-typescript@7.16.7
+npm i -D @babel/preset-react@7.16.7
+
+    //React Testing Library
+npm i -D @testing-library/react@12.1.3
+npm i -D @testing-library/jest-dom@5.16.2
+npm i -D identity-obj-proxy@3.0.0
+npm i -D regenerator-runtime@0.13.9
+
+
+
 
     // Анализирует размер бандла и все что с ним связано
 npm i -D webpack-bundle-analyzer@4.5.0
 npm i -D @types/webpack-bundle-analyzer@4.4.1
+
+
 
 
 
