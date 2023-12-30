@@ -1,7 +1,8 @@
 import React from 'react';
-import type { ComponentMeta, ComponentStory } from '@storybook/react';
-
+import type { ComponentMeta, StoryObj } from '@storybook/react';
 import { Button, ThemeButton } from './Button';
+
+type Story = StoryObj<typeof Button>;
 
 export default {
     title: 'shared/Button',
@@ -11,15 +12,15 @@ export default {
     },
 } as ComponentMeta<typeof Button>;
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
-
-export const Primary = Template.bind({});
-Primary.args = {
-    children: 'Text',
+export const Primary: Story = {
+    args: {
+        children: 'Text',
+    },
 };
 
-export const Clear = Template.bind({});
-Clear.args = {
-    children: 'Text',
-    theme: ThemeButton.CLEAR,
+export const Clear: Story = {
+    args: {
+        children: 'Text',
+        theme: ThemeButton.CLEAR,
+    },
 };
