@@ -1,6 +1,6 @@
 import webpack from 'webpack';
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BuildOptions } from './types/config';
+import { buildCssLoader } from './loaders/buildCssLoader';
 
 // return all loaders (write all loaders)
 export function buildLoaders({ isDev }:BuildOptions):webpack.RuleSetRule[] {
@@ -31,30 +31,7 @@ export function buildLoaders({ isDev }:BuildOptions):webpack.RuleSetRule[] {
     };
 
     // For work witch SCSS;CSS
-    const cssLoader = {
-        test: /\.s[ac]ss$/i,
-        use: [
-            isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
-
-            {
-                loader: 'css-loader',
-                options: {
-                    // for style isolation (Generate unique ID)
-                    modules: {
-
-                        auto: (resPath: string) => Boolean(resPath.includes('.module.')),
-
-                        localIdentName: isDev
-                            ? '[path][name]__[local]--[hash:base64:8]'
-                            : '[hash:base64:8]',
-
-                    },
-                },
-            },
-
-            'sass-loader',
-        ],
-    };
+    const cssLoader = buildCssLoader(isDev);
 
     const typescriptLoader = {
         test: /\.tsx?$/,
