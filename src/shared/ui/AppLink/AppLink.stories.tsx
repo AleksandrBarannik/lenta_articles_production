@@ -1,43 +1,48 @@
 import React from 'react';
 import type { ComponentMeta, StoryObj } from '@storybook/react';
+import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { Button, ThemeButton } from './Button';
 
-type Story = StoryObj<typeof Button>;
+type Story = StoryObj<typeof AppLink>;
 
 export default {
-    title: 'shared/Button',
-    component: Button,
+    title: 'shared/AppLink',
+    component: AppLink,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} as ComponentMeta<typeof Button>;
+    args: {
+        to: '/',
+    },
+} as ComponentMeta<typeof AppLink>;
 
 export const Primary: Story = {
     args: {
         children: 'Text',
+        theme: AppLinkTheme.PRIMARY,
     },
 };
 
-export const Clear: Story = {
+export const Secondary: Story = {
     args: {
         children: 'Text',
-        theme: ThemeButton.CLEAR,
+        theme: AppLinkTheme.SECONDARY,
     },
 };
 
-export const Outline: Story = {
+export const PrimaryDark: Story = {
     args: {
         children: 'Text',
-        theme: ThemeButton.OUTLINE,
+        theme: AppLinkTheme.PRIMARY,
     },
+    decorators: [ThemeDecorator(Theme.DARK)],
 };
 
-export const OutlineDark: Story = {
+export const SecondaryDark: Story = {
     args: {
         children: 'Text',
-        theme: ThemeButton.OUTLINE,
+        theme: AppLinkTheme.SECONDARY,
     },
     decorators: [ThemeDecorator(Theme.DARK)],
 };
