@@ -81,6 +81,10 @@ npm i -D regenerator-runtime@0.13.9
 
      //StoryBook (ScreenShot tests) + LOKI
 npx sb init --builder webpack5
+npm i -D loki
+    // ИНициализация и запуск тестов
+npx loki init --config ./config/storybook (указываем где лежит конфиг если не в корне)
+npx loki test  // запуск тестов
 
 
     // Анализирует размер бандла и все что с ним связано
