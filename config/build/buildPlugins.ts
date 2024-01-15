@@ -7,7 +7,7 @@ import { BuildOptions, BuildPath } from './types/config';
 
 // return all Plugins for webpack
 export function buildPlugins({ paths, isDev }: BuildOptions):webpack.WebpackPluginInstance[] {
-    return [
+    const plugins = [
 
         // for automatic add Html in build on our template
         new HTMLWebpackPlugin({
@@ -28,13 +28,15 @@ export function buildPlugins({ paths, isDev }: BuildOptions):webpack.WebpackPlug
             // For TS __IS_DEV__ create in app/types/global.ts
             __IS_DEV__: JSON.stringify(isDev),
         }),
-
-        // for update App without update Page (auto)
-        new webpack.HotModuleReplacementPlugin(),
-        new ReactRefreshPlugin(),
-
-        new BundleAnalyzerPlugin({
-            openAnalyzer: false,
-        }),
     ];
+
+    if (isDev) {
+        plugins.push(new webpack.HotModuleReplacementPlugin());
+        plugins.push(new ReactRefreshPlugin());
+        plugins.push(new BundleAnalyzerPlugin({
+            openAnalyzer: false,
+        }));
+    }
+
+    return plugins;
 }
