@@ -25,7 +25,12 @@ export const Sidebar = ({ className } : SidebarProps) => {
         >
 
             {/* eslint-disable-next-line react/button-has-type */}
-            <button data-testid="sidebar-toggle" onClick={onToggle}>Toggle</button>
+            {/* <button */}
+            {/*     data-testid="sidebar-toggle" */}
+            {/*     onClick={onToggle} */}
+            {/* > */}
+            {/*     Toggle */}
+            {/* </button> */}
             <div className={cls.switchers}>
                 <ThemeSwitcher />
                 <LangSwitcher className={cls.lang} />
