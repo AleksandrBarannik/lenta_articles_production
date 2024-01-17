@@ -82,6 +82,9 @@ npm i -D regenerator-runtime@0.13.9
      //StoryBook (ScreenShot tests) + LOKI
 npx sb init --builder webpack5
 npm i -D loki
+npm i -D reg-cli@0.17.6 //для  нормального сравнения скрин тестов
+
+
     // ИНициализация и запуск тестов
 npx loki init --config ./config/storybook (указываем где лежит конфиг если не в корне)
 npx loki test  // запуск тестов
