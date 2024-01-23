@@ -17,6 +17,7 @@ module.exports = {
         'react',
         '@typescript-eslint',
         'i18next',
+        'react-hooks',
     ],
 
     rules: {
@@ -43,6 +44,11 @@ module.exports = {
                 ignoreAttribute: ['data-testid', 'to'], // игнорирование data-testid
             },
         ],
+        'jsx-a11y/no-static-element-interactions': 'off', // Временнно отключаем отвечает за семантику
+        'jsx-a11y/click-events-have-key-events': 'off',
+        'react-hooks/rules-of-hooks': 'error', // Проверка правил в хуках
+        'react-hooks/exhaustive-deps': 'error', // Проверка массива зависимостей
+
     },
     globals: {
         __IS_DEV__: true,
